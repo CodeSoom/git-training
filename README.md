@@ -289,3 +289,7 @@ git push origin :<브랜치 이름>
 위 repo를 공용 repository로 하여 각자 이니셜로 만든 ex) [csh.md](http://csh.md) 파일을 추가하여
 
 Pull Request를 날려봅니다.
+
+## 참고 자료
+
+- https://github.com/Taeung/git-training
