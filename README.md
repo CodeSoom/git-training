@@ -286,7 +286,8 @@ git push origin :<브랜치 이름>
 
 [https://github.com/CodeSoom/git-training](https://github.com/CodeSoom/git-training)
 
-위 repo를 공용 repository로 하여 각자 이니셜로 만든 ex) [csh.md](http://csh.md) 파일을 추가하여
+위 repo를 공용 repository로 하여
+각자 이니셜로 만든 문서 파일(e.g. `csh.md`)을 추가하여
 
 Pull Request를 날려봅니다.
 
