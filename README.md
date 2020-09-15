@@ -105,7 +105,7 @@ git status
 ### Step #1 - 작업 브랜치 만들기
 
 ```bash
-git checkout -b <브랜치 이름> upstream/master
+git checkout -b <브랜치 이름> upstream/main
 ```
 
 upstream/master는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
@@ -115,9 +115,9 @@ upstream/master는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
 ### Step #2 - upstream 원격 저장소의 최신 상태를 반영하기
 
 ```bash
-git fetch upstream master
+git fetch upstream main
 
-git rebase upstream/master
+git rebase upstream/main
 ```
 
 ### Step #3 - 작업하기
@@ -224,24 +224,24 @@ git push origin <브랜치 이름>
 
 ### Step #1 - 내 컴퓨터의 master 브랜치에 최신 코드 반영하기
 
-#### master 브랜치로 이동
+#### main 브랜치로 이동
 
 ```bash
-git checkout master
+git checkout main
 ```
 
 #### 최신 코드 반영
 
 ```bash
-git fetch upstream master
+git fetch upstream main
 
-git rebase upstream/master
+git rebase upstream/main
 ```
 
 #### origin 원격 저장소에 master 브랜치를 올려보기 (필수는 아니지만 기분이 좋아짐)
 
 ```bash
-git push origin master
+git push origin main
 ```
 
 ### Step #2 - Merge된 브랜치 확인
