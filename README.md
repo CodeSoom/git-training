@@ -108,7 +108,7 @@ git status
 git checkout -b <브랜치 이름> upstream/main
 ```
 
-upstream/master는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
+upstream/main는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
 
 브랜치 이름은 작업한 내용을 표현해야 합니다. ex) login-oauth-apply
 
@@ -222,7 +222,7 @@ git push origin <브랜치 이름>
 
 ## Merge된 브랜치 정리하기
 
-### Step #1 - 내 컴퓨터의 master 브랜치에 최신 코드 반영하기
+### Step #1 - 내 컴퓨터의 main 브랜치에 최신 코드 반영하기
 
 #### main 브랜치로 이동
 
@@ -238,7 +238,7 @@ git fetch upstream main
 git rebase upstream/main
 ```
 
-#### origin 원격 저장소에 master 브랜치를 올려보기 (필수는 아니지만 기분이 좋아짐)
+#### origin 원격 저장소에 main 브랜치를 올려보기 (필수는 아니지만 기분이 좋아짐)
 
 ```bash
 git push origin main
@@ -248,7 +248,7 @@ git push origin main
 
 내 컴퓨터에 있는 브랜치 중 Merge된 것 보기
 
-이 목록에 master도 포함된다는 점에 주의!
+이 목록에 main도 포함된다는 점에 주의!
 
 ```bash
 git branch --merge
@@ -256,7 +256,7 @@ git branch --merge
 
 내 컴퓨터와 원격 저장소에 있는 브랜치 중 Merge된 것 보기
 
-이 목록에 master도 포함된다는 점에 주의!
+이 목록에 main도 포함된다는 점에 주의!
 
 ```bash
 git branch -a --merge
