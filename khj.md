@@ -1,1 +1,1 @@
-pull request training
+pull request trainings
