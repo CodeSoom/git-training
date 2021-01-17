@@ -191,3 +191,29 @@ $ git add .
 $ git commit
 ```
 
+커밋 메시지 확인
+
+```shell
+$ git log
+commit 3424eafc52ef4602e5d27c1188fe9f3c48543f17 (HEAD -> gimsesu)
+Author: gimsesu <tkfrn4799@gmail.com>
+Date:   Mon Jan 18 00:10:52 2021 +0900
+
+    Modify docs/gimsesu.md
+
+    Create images/git_gimsesu_2.png
+    Create images/git_gimsesu_3.png
+```
+
+### Step #4 - origin 원격 저장소에 작업 브랜치 올리기
+
+```shell
+$ git push origin gimsesu
+```
+
+### Step #5 - Pull Request가 바뀐 것 확인하기
+
+내가 방금 추가로 커밋한 내용을 확인할 수 있다.
+
+![git_gimsesu_4](../images/git_gimsesu_4.png)
+
