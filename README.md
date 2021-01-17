@@ -14,9 +14,14 @@
 ## 터미널 환경 설정
 
 - Windows
-  - PowerShell 을 공부하고 git 명령어 수행은 PowerShell 에서 진행
+  - WSL2를 공부하고 설치.
+  - Windows terminal 설치.
+  - Git 명령어 수행은 CLI 환경인 terminal에서 진행.
+  - [WSL란?](https://docs.microsoft.com/ko-kr/windows/wsl/about)
+  - [WSL 설치 및 WSL 2로 업데이트](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
 - Mac
-  - iterm 설치 후 iterm 터미널에서 진행
+  - iterm2 설치 후 iterm 터미널에서 진행
+  - `brew install --cask iterm2`
 
 ## 시작하기
 
