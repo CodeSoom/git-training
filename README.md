@@ -105,7 +105,7 @@ git status
 ### Step #1 - 작업 브랜치 만들기
 
 ```bash
-git checkout -b <브랜치 이름> upstream/main
+git switch -c <브랜치 이름> upstream/main
 ```
 
 upstream/main는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
@@ -185,7 +185,7 @@ Pull Request를 했지만 수정하고 싶을 때가 있습니다. 코드 리뷰
 ### Step #1 - 해당 브랜치로 이동하기
 
 ```bash
-git checkout <브랜치 이름>
+git switch <브랜치 이름>
 ```
 
 ### Step #2 - 수정하기
@@ -227,7 +227,7 @@ git push origin <브랜치 이름>
 #### main 브랜치로 이동
 
 ```bash
-git checkout main
+git switch main
 ```
 
 #### 최신 코드 반영
