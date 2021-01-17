@@ -1,3 +1,3 @@
 HyeongTak Shin
 
-https://github.com/dodoongtak
+[SHT's Github](https://github.com/dodoongtak)
