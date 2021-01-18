@@ -1,4 +1,4 @@
-git training
+git training2
 
 # Git에 대한 이해 & 설치
 
