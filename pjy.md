@@ -1,3 +1,3 @@
 # pangnem-git-training
 
-hello
+Hello, My Nickname is Pangnem.
