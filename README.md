@@ -118,17 +118,14 @@ upstream/main는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
 브랜치 이름은 작업한 내용을 표현해야 합니다. ex) login-oauth-apply
 
 
-Git 2.23 이전 버전인 경우, 아래와 같은 오류 메세지가 출력됩니다.
-> git: 'switch' is not a git command. See 'git --help'.
-
-해결방법
-- git을 최신버전으로 업데이트 하기 (권장)
-또는
-- 아래 방법으로 브랜치 작성과 체크아웃(브랜치 전환)을 함께 할 수 있습니다.
-
-```bash 
-git checkout -b <브랜치 이름> 
-```
+>Git 2.23 이전 버전인 경우, 아래와 같은 오류 메세지가 출력됩니다.
+>> git: 'switch' is not a git command. See 'git --help'.
+>
+>해결방법
+>- git을 최신버전으로 업데이트 하기 (권장)
+>또는
+>- 이전 버전 명령어 checkout을 사용하여  브랜치 작성과 체크아웃 하기.
+>> ex) git checkout -b <브랜치 이름> 
 
 
 ### Step #2 - upstream 원격 저장소의 최신 상태를 반영하기
