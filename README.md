@@ -120,15 +120,14 @@ upstream/main는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
 
 >Git 2.23 이전 버전인 경우, 아래와 같은 오류 메세지가 출력됩니다.
 >> git: 'switch' is not a git command. See 'git --help'.
-></br>
->해결방법
-> - git을 최신버전으로 업데이트 하기 (권장)
-> </br>
-> </br> 또는 
-> </br>
-> - 아래 방법으로 브랜치 작성과 체크아웃(브랜치 전환)을 함께 할 수 있습니다.
->> git checkout -b <브랜치 이름> upstream/main
 
+>해결방법
+> <pre>
+> - git을 최신버전으로 업데이트 하기 (권장)
+> </br> 또는 </br>
+> - 아래 방법으로 브랜치 작성과 체크아웃(브랜치 전환)을 함께 할 수 있습니다. </br>
+> git checkout -b <브랜치 이름> upstream/main
+></pre>
 
 ### Step #2 - upstream 원격 저장소의 최신 상태를 반영하기
 
