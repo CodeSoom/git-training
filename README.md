@@ -28,13 +28,13 @@
 ### 새 저장소 만들고 시작하기
 
 ```bash
-git init
+$ git init
 ```
 
 ### 원격 저장소를 가져와서 시작하기
 
 ```bash
-git clone <원격 저장소 주소>
+$ git clone <원격 저장소 주소>
 ```
 
 ### Sourcetree에 저장소 폴더 추가하기
@@ -48,13 +48,13 @@ Sourcetree를 실행해 방금 만들거나 가져온 폴더를 추가합니다.
 ### 원격 저장소 목록 확인
 
 ```bash
-git remote
+$ git remote
 ```
 
 ### 원격 저장소 정보 자세히 보기
 
 ```bash
-git remote -v
+$ git remote -v
 ```
 
 ![images/0.png](images/0.png)
@@ -69,17 +69,17 @@ git remote -v
 아래는 git init 후 수동으로 원격 저장소를 추가할 때 사용하는 방법입니다.
 
 ```bash
-git remote add origin <내 원격 저장소 주소>
+$ git remote add origin <내 원격 저장소 주소>
 
-git fetch origin
+$ git fetch origin
 ```
 
 ### upstream 원격 저장소 추가
 
 ```bash
-git remote add upstream <공용 원격 저장소 주소>
+$ git remote add upstream <공용 원격 저장소 주소>
 
-git fetch upstream
+$ git fetch upstream
 ```
 
 ### git fetch
@@ -91,11 +91,11 @@ git fetch upstream
 ### Step #0
 
 ```bash
-git clone <fork된 내 GitHub repository 주소>
+$ git clone <fork된 내 GitHub repository 주소>
 
-git remote add upstream <공용 원격 저장소 주소>
+$ git remote add upstream <공용 원격 저장소 주소>
 
-git remote -v
+$ git remote -v
 ```
 
 upstream과 origin이 아래와 같은지 확인합니다.
@@ -110,7 +110,7 @@ git status
 ### Step #1 - 작업 브랜치 만들기
 
 ```bash
-git switch -c <브랜치 이름> upstream/main
+$ git switch -c <브랜치 이름> upstream/main
 ```
 
 upstream/main는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
@@ -120,9 +120,9 @@ upstream/main는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
 ### Step #2 - upstream 원격 저장소의 최신 상태를 반영하기
 
 ```bash
-git fetch upstream main
+$ git fetch upstream main
 
-git rebase upstream/main
+$ git rebase upstream/main
 ```
 
 ### Step #3 - 작업하기
@@ -136,7 +136,7 @@ git rebase upstream/main
 새 파일을 추가하는 게 아니라, 파일 추가/변경/삭제란 “바뀐 점”을 추가합니다.
 
 ```bash
-git add .
+$ git add .
 ```
 
 방금 추가한 바뀐 점을 커밋합니다.
@@ -144,7 +144,7 @@ git add .
 가능하면 메시지를 우리가 나중에 찾아볼 수 있는 형태로 씁니다.
 
 ```bash
-git commit
+$ git commit
 ```
 
 ### Git commit message style guide
@@ -164,7 +164,7 @@ git commit 에디터는 vi 에디터를 기본적으로 씁니다.
 ### Step #5 - origin 원격 저장소에 작업 브랜치 올리기
 
 ```bash
-git push origin <브랜치 이름>
+$ git push origin <브랜치 이름>
 ```
 
 origin과 <브랜치 이름> 사이엔 공백이 들어갑니다.
@@ -190,7 +190,7 @@ Pull Request를 했지만 수정하고 싶을 때가 있습니다. 코드 리뷰
 ### Step #1 - 해당 브랜치로 이동하기
 
 ```bash
-git switch <브랜치 이름>
+$ git switch <브랜치 이름>
 ```
 
 ### Step #2 - 수정하기
@@ -204,7 +204,7 @@ git switch <브랜치 이름>
 새 파일을 추가하는 게 아니라, 파일 추가/변경/삭제란 “바뀐 점”을 추가합니다.
 
 ```bash
-git add .
+$ git add .
 ```
 
 방금 추가한 바뀐 점을 커밋합니다.
@@ -212,13 +212,13 @@ git add .
 가능하면 메시지를 우리가 나중에 찾아볼 수 있는 형태로 씁니다.
 
 ```bash
-git commit
+$ git commit
 ```
 
 ### Step #4 - origin 원격 저장소에 작업 브랜치 올리기
 
 ```bash
-git push origin <브랜치 이름>
+$ git push origin <브랜치 이름>
 ```
 
 ### Step #5 - Pull Request가 바뀐 것 확인하기
@@ -232,21 +232,21 @@ git push origin <브랜치 이름>
 #### main 브랜치로 이동
 
 ```bash
-git switch main
+$ git switch main
 ```
 
 #### 최신 코드 반영
 
 ```bash
-git fetch upstream main
+$ git fetch upstream main
 
-git rebase upstream/main
+$ git rebase upstream/main
 ```
 
 #### origin 원격 저장소에 main 브랜치를 올려보기 (필수는 아니지만 기분이 좋아짐)
 
 ```bash
-git push origin main
+$ git push origin main
 ```
 
 ### Step #2 - Merge된 브랜치 확인
@@ -256,7 +256,7 @@ git push origin main
 이 목록에 main도 포함된다는 점에 주의!
 
 ```bash
-git branch --merge
+$ git branch --merge
 ```
 
 내 컴퓨터와 원격 저장소에 있는 브랜치 중 Merge된 것 보기
@@ -264,7 +264,7 @@ git branch --merge
 이 목록에 main도 포함된다는 점에 주의!
 
 ```bash
-git branch -a --merge
+$ git branch -a --merge
 ```
 
 ### Step #3 - 내 컴퓨터의 브랜치 삭제
@@ -272,19 +272,19 @@ git branch -a --merge
 #### 안전하게 삭제
 
 ```bash
-git branch -d <브랜치 이름>
+$ git branch -d <브랜치 이름>
 ```
 
 #### 강제로 삭제
 
 ```bash
-git branch -D <브랜치 이름>
+$ git branch -D <브랜치 이름>
 ```
 
 ### Step #4 - fork된 나의 원격 저장소 브랜치 삭제
 
 ```bash
-git push origin :<브랜치 이름>
+$ git push origin :<브랜치 이름>
 ```
 
 ## PR 트레이닝
