@@ -28,13 +28,22 @@
 ### 새 저장소 만들고 시작하기
 
 ```bash
+mkdir <생성하고 싶은 디렉토리 이름>
+cd <생성한 디렉토리 이름>
 git init
+
+# 예)
+~ $ mkdir test
+~ $ cd test
+~/test $ git init
 ```
 
 ### 원격 저장소를 가져와서 시작하기
 
 ```bash
 git clone <원격 저장소 주소>
+
+# 예) git clone https://github.com/wholemann/daily-coding-dojo.git
 ```
 
 ### Sourcetree에 저장소 폴더 추가하기
@@ -57,11 +66,6 @@ git remote
 git remote -v
 ```
 
-![images/0.png](images/0.png)
-
-- upstream - 공용 repository(보통 팀 repo)
-- origin - 공용 repository 를 내 계정에 fork한 repository
-
 ### origin 원격 저장소 추가
 
 주의) clone으로 원격 저장소를 가져오면 origin 원격 저장소가 이미 추가된 상태입니다.
@@ -69,7 +73,7 @@ git remote -v
 아래는 git init 후 수동으로 원격 저장소를 추가할 때 사용하는 방법입니다.
 
 ```bash
-git remote add origin <내 원격 저장소 주소>
+git remote add origin <내 계정의 repository 주소>
 
 git fetch origin
 ```
@@ -77,35 +81,61 @@ git fetch origin
 ### upstream 원격 저장소 추가
 
 ```bash
-git remote add upstream <공용 원격 저장소 주소>
+git remote add upstream <PR을 보낼 원격 repository 주소>
 
 git fetch upstream
 ```
 
-### git fetch
+## Pull Request를 이용한 협업 시작하기
 
-[fetch(가져오기)【원격 저장소】 | 누구나 쉽게 이해할 수 있는 Git 입문~버전 관리를 완벽하게 이용해보자~ | Backlog](https://backlog.com/git-tutorial/kr/stepup/stepup3_2.html)
+![triangular-workflows](images/triangular-workflows.png)
 
-## 협업 시작하기
+- upstream - PR을 보내고 싶은 repository(회사에선 우리팀 repository)
+- origin - upstream에서 내 계정으로 fork한 repository
 
 ### Step #0
 
+먼저 PR(Pull Request)를 보내고 싶은 repository를 fork 합니다.
+fork를 하면 본인 계정의 GitHub에 동일한 repository가 복사됩니다.
+
+![github-fork](images/github-fork.png)
+
+내 계정에 동일한 repository가 복제된 걸 확인할 수 있습니다. 아래 이미지처럼 초록색 버튼을 클릭하면
+나오는 창에서 주소를 복사합니다.
+
+![forked-repository](images/forked-repository.png)
+
+복사한 주소를 이용하면 내 로컬 머신에서 clone 할 수 있습니다.
+
+주의) clone으로 원격 저장소를 가져오면 origin 원격 저장소가 이미 추가된 상태입니다.
+
 ```bash
-git clone <fork된 내 GitHub repository 주소>
+git clone <내 계정에 fork된 repository 주소>
 
-git remote add upstream <공용 원격 저장소 주소>
+git remote add upstream <PR을 보낼 원격 repository 주소>
 
-git remote -v
+# 예)
+git clone https://github.com/wholemann/git-training.git
+
+git remote add upstream https://github.com/CodeSoom/git-training.git
 ```
 
-upstream과 origin이 아래와 같은지 확인합니다.
+PR을 보내는 과정에서 원격 저장소는 upstream. origin 2개가 필요합니다.
+로컬 머신(내 컴퓨터) 관점에서 보면 내 계정의 repository도 원격이고,
+upstream의 repository도 원격입니다.
 
-- upstream - 공용 repository(보통 팀 repo)
-- origin - 공용 repository 를 내 계정에 fork한 repository
+- upstream - PR을 보내고 싶은 repository(회사에선 우리팀 repository)
+- origin - upstream에서 내 계정으로 fork한 repository
 
-git status
+`git remote -v` 를 통해 upstream과 origin이 아래와 같은지 확인합니다.
 
-(git status는 수시로 해주는 게 좋습니다. 내가 의도한 작업이 수행 됐는지 수시로 확인합니다.)
+```bash
+~/codesoom/git-training $ git remote -v
+origin      git@github.com:wholemann/git-training.git (fetch)
+origin      git@github.com:wholemann/git-training.git (push)
+upstream      git@github.com:CodeSoom/git-training.git (fetch)
+upstream      git@github.com:CodeSoom/git-training.git (push)
+```
 
 ### Step #1 - 작업 브랜치 만들기
 
@@ -119,8 +149,16 @@ upstream/main는 붙여서 쓰고, 가운데 슬래시(/)가 들어갑니다.
 
 ### Step #2 - upstream 원격 저장소의 최신 상태를 반영하기
 
+#### git fetch
+
+[fetch(가져오기)](https://backlog.com/git-tutorial/kr/stepup/stepup3_2.html)
+
+#### git rebase
+
+[rebase로 병합하기](https://backlog.com/git-tutorial/kr/stepup/stepup2_8.html)
+
 ```bash
-git fetch upstream main
+git fetch upstream
 
 git rebase upstream/main
 ```
@@ -238,7 +276,7 @@ git switch main
 #### 최신 코드 반영
 
 ```bash
-git fetch upstream main
+git fetch upstream
 
 git rebase upstream/main
 ```
@@ -287,13 +325,12 @@ git branch -D <브랜치 이름>
 git push origin :<브랜치 이름>
 ```
 
-## PR 트레이닝
+## PR 트레이닝 미션
 
 [https://github.com/CodeSoom/git-training](https://github.com/CodeSoom/git-training)
 
-위 repo를 공용 repository로 하여
-각자 이니셜로 만든 문서 파일(e.g. `csh.md`)을 추가하여
-
+[Pull Request를 이용한 협업 시작하기](#Pull-Request를-이용한-협업-시작하기)를 참고하여,
+각자 이니셜로 만든 문서 파일(예) `csh.md`)을 추가하여 위의 repository에
 Pull Request를 날려봅니다.
 
 ## 참고 자료
