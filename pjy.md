@@ -1,3 +1,3 @@
 # pjy - pangnem
 
-- Hello, My Nickname is `pangnem`.
+- Hello👋, My Nickname is `pangnem`.
