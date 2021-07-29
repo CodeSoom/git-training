@@ -336,4 +336,3 @@ Pull Request를 날려봅니다.
 ## 참고 자료
 
 - https://github.com/Taeung/git-training
-- 코드 수정
