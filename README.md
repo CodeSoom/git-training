@@ -108,6 +108,7 @@ fork를 하면 본인 계정의 GitHub에 동일한 repository가 복사됩니�
 복사한 주소를 이용하면 내 로컬 머신에서 clone 할 수 있습니다.
 
 주의) clone으로 원격 저장소를 가져오면 origin 원격 저장소가 이미 추가된 상태입니다.
+예) K:\CodeSoom 폴더에서 git clone 하면 K:\CodeSoom\git-training 폴더가 생김
 
 ```bash
 git clone <내 계정에 fork된 repository 주소>
