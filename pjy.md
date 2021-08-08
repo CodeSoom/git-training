@@ -1,3 +1,3 @@
-# pjy
+# pjy - codesoom git-training
 
 HI 👋
