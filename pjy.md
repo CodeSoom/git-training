@@ -1,3 +1,3 @@
 # pjy - codesoom git-training
 
-HI 👋
+Hi, there 👋
