@@ -1,1 +1,1 @@
-console.log("안녕");
+console.log("잘가");
