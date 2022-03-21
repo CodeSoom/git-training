@@ -1,2 +1,1 @@
-git-training
-pull request test
+commit test
